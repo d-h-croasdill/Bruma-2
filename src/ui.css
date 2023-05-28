@@ -1,0 +1,96 @@
+/*
+	Patches to the core styles.
+*/
+#story {
+	margin-left: 0;
+	transition: margin-left 200ms ease-in;
+}
+#ui-bar.stowed ~ #story {
+	margin-left: 0;
+}
+@media screen and (max-width: 1136px) {
+	#story {
+		margin-left: 0;
+	}
+	#ui-bar.stowed ~ #story {
+		margin-left: 0;
+	}
+}
+/*
+	At very narrow viewport widths, set `#story{margin-left}` equal to the value
+	of `#ui-bar.stowed~#story{margin-left}`, so that `#ui-bar` will side over top
+	of `#story` when unstowed, rather than shoving it over.
+*/
+@media screen and (max-width: 768px) {
+	#story {
+		margin-left: 0;
+	}
+}
+
+
+/*
+	Default structural styles.
+*/
+#ui-bar {
+	position: fixed;
+	z-index: 50;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 600px;
+	margin: 0;
+	padding: 0;
+}
+#ui-bar.stowed {
+	left: -15.5em;
+}
+#ui-bar-tray {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+#ui-bar-body {
+	height: 600px;
+	margin: 0;
+	padding: 0;
+}
+#ui-bar.stowed #ui-bar-history,
+#ui-bar.stowed #ui-bar-body {
+	visibility: hidden;
+	transition: visibility 200ms step-end;
+}
+
+#ui-bar-tray{
+	display: none;
+}
+
+
+
+/*
+	Default appearance styles.
+*/
+#ui-bar {
+	background-color: #222;
+	border-right: 0;
+	text-align: left;
+}
+#ui-bar a {
+	text-decoration: none;
+}
+#ui-bar hr {
+	border-color: #444;
+}
+
+#ui-bar-body {
+	line-height: 1.5;
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+#ui-bar-body > :not(:first-child) {
+	margin-top: 0em;
+}
+
+#story-caption{
+
+}

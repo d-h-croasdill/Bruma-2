@@ -1,0 +1,19 @@
+:: StoryData
+{
+	"ifid": "520538D4-4981-462D-A9BF-6870ABDAF177",
+	"start": "Start",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "zoom": 1
+}
+
+:: StoryTitle
+    TEMPLATE
+
+:: Start
+
+:: todo
+    /* need 3-l, 3-b, 3-r*/
+    /* need 7-b */
+    /* need 7-f-d (sign) */
+    /* need to process images to smaller size */
